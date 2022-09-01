@@ -3,14 +3,14 @@ import java.util.Scanner;
 /**
  * To check whether the entered String is palyndrome or not
  */
-public class sample {
+public class StringPalyndrome {
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a string : ");
 
-        String s = "Ollo";
+        String s = sc.next();
         String newString = "";
         char letter;
 
