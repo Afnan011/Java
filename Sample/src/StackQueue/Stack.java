@@ -45,7 +45,7 @@ public class Stack {
         }
 
         while (currentPtr != null) {
-            System.out.print(currentPtr.data + " ");
+            System.out.print(currentPtr.data + " <- ");
             currentPtr = currentPtr.next;
         }
     }
