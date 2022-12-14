@@ -1,4 +1,6 @@
-public class RecursionEx {
+package RecursionExamples;
+
+public class RecursionEx1 {
 
 public static void fact(int n){
     int k = 1;
@@ -19,7 +21,7 @@ public static void f(int n){
 
     public static void main(String[] args) {
 
-        int n = 5;
+//        int n = 5;
 //        fact(n);
 
         f(5);
