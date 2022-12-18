@@ -103,6 +103,49 @@ public class binarySearchTree {
 
     }
 
+    public void deleteNode(int key){
+        Node currentNode = root;
+        deleteNodeHelper(currentNode, key);
+    }
+
+    private static Node deleteNodeHelper(Node root, int key){
+
+        if (root == null){
+            return  root;
+        }
+
+        if (key < root.data){
+            root.left =  deleteNodeHelper(root.left, key);
+        }
+        else if (key > root.data) {
+            root.right = deleteNodeHelper(root.right, key);
+        }
+        else{
+            if (root.left == null){
+                return root.right;
+            }
+            else if (root.right == null) {
+                return root.left;
+            }
+
+            root.data = getMinVal(root.right);
+            root.right = deleteNodeHelper(root.right, root.data);
+        }
+
+
+        return root;
+    }
+
+    private static int getMinVal(Node root) {
+        int value = root.data;
+        while (root != null){
+            value = root. data;
+            root = root.left;
+        }
+
+        return value;
+    }
+
     public static void main(String[] args) {
         binarySearchTree tree = new binarySearchTree();
 
@@ -111,6 +154,11 @@ public class binarySearchTree {
         tree.insertData(15);
         tree.insertData(3);
         tree.insertData(8);
+        tree.insertData(11);
+        tree.insertData(18);
+        tree.insertData(2);
+        tree.insertData(6);
+        tree.insertData(9);
 
         System.out.println("InOrder");
         tree.inOrder();
@@ -120,6 +168,14 @@ public class binarySearchTree {
 
         System.out.println("\nPostOrder");
         tree.postOrder();
+
+        tree.deleteNode(5);
+        System.out.println();
+        tree.inOrder();
+
+
+
+
 
     }
 
