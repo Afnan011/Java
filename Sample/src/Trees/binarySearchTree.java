@@ -111,7 +111,7 @@ public class binarySearchTree {
     private static Node deleteNodeHelper(Node root, int key){
 
         if (root == null){
-            return  root;
+            return root;
         }
 
         if (key < root.data){
@@ -129,7 +129,7 @@ public class binarySearchTree {
             }
 
             root.data = getMinVal(root.right);
-            root.right = deleteNodeHelper(root.right, root.data);
+             root.right = deleteNodeHelper(root.right, root.data);
         }
 
 
@@ -149,7 +149,7 @@ public class binarySearchTree {
     public static void main(String[] args) {
         binarySearchTree tree = new binarySearchTree();
 
-        tree.insertData(10);
+/*        tree.insertData(10);
         tree.insertData(5);
         tree.insertData(15);
         tree.insertData(3);
@@ -158,7 +158,17 @@ public class binarySearchTree {
         tree.insertData(18);
         tree.insertData(2);
         tree.insertData(6);
-        tree.insertData(9);
+        tree.insertData(9);*/
+
+        tree.insertData(25);
+        tree.insertData(6);
+        tree.insertData(5);
+        tree.insertData(3);
+        tree.insertData(20);
+        tree.insertData(15);
+        tree.insertData(21);
+        tree.insertData(35);
+        tree.insertData(40);
 
         System.out.println("InOrder");
         tree.inOrder();
@@ -169,7 +179,7 @@ public class binarySearchTree {
         System.out.println("\nPostOrder");
         tree.postOrder();
 
-        tree.deleteNode(5);
+        tree.deleteNode(20);
         System.out.println();
         tree.inOrder();
 
