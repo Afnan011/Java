@@ -15,6 +15,8 @@ public class Assn1 {
             System.out.println("1. Manage Current Account");
             System.out.println("2. Manage Savings Account");
             System.out.println("3. Exit");
+            System.out.print("Enter your choice: ");
+
             ch = scanner.nextInt();
 
             switch (ch) {
@@ -52,6 +54,8 @@ public class Assn1 {
             System.out.println("2. Withdraw");
             System.out.println("3. Check Balance");
             System.out.println("4. Back to main menu");
+            System.out.print("Enter your choice: ");
+
             ch = scanner.nextInt();
 
             try {
