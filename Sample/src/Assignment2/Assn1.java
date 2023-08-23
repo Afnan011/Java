@@ -1,3 +1,14 @@
+/*
+Create an interface Account with methods Bank_deposit(double
+Amount) and withdraw(double amount). Implement this interface in
+classes for different types of bank accounts, such as CheckingAccount
+and SavingsAccount. Write a program that simulates banking operations
+using these account types with exception handling:
+
+
+ */
+
+
 package Assignment2;
 
 import java.util.Scanner;

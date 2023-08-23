@@ -1,3 +1,14 @@
+/*
+Design an interface named Plugin with a method execute(). Implement
+this interface in classes for different types of plugins, such as
+TextPlugin, ImagePlugin, and AudioPlugin. Write a program that
+dynamically loads and executes plugins based on user input with
+exception handling:
+
+*/
+
+
+
 package Assignment2;
 import java.util.Scanner;
 
