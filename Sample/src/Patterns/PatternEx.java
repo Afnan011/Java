@@ -8,6 +8,7 @@ public class PatternEx {
 //        pattern2(5);
 //        pattern3(5);
         pattern4(5);
+//        pattern2Demo(5);
 
     }
 
@@ -76,7 +77,6 @@ public class PatternEx {
 
             int noCols = row < n ? n-row : row-n+1;
 
-
             int noSpace = n - noCols;
             for (int i = 0; i < noSpace; i++) {
                 System.out.print(" ");
@@ -103,5 +103,24 @@ public class PatternEx {
 
          */
 
+    }
+
+
+    private static void pattern2Demo(int n)
+    {
+        for (int row = 0; row < n*2; row++) {
+
+            int colCount = row<n ? row : n*2-row;
+            int noSpace = n - colCount;
+            for (int sp = 0; sp < noSpace; sp++) {
+                System.out.print("  ");
+            }
+
+            for (int col = 0; col < colCount; col++) {
+
+                System.out.print("  * ");
+            }
+            System.out.println();
+        }
     }
 }
